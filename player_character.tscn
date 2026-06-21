@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c3xiakwrsg4bg"]
+
+[ext_resource type="Texture2D" uid="uid://c3u0vp8narxsm" path="res://icon.svg" id="1_02ohv"]
+[ext_resource type="Script" uid="uid://bpls1miuyvpxq" path="res://player_character.gd" id="1_5up26"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5up26"]
+size = Vector2(64, 64)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5up26"]
+radius = 371.55887
+
+[node name="Player Character" type="CharacterBody2D" unique_id=1430175773]
+script = ExtResource("1_5up26")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=868140333]
+texture = ExtResource("1_02ohv")
+
+[node name="Player Collisions" type="CollisionShape2D" parent="." unique_id=1823778696]
+shape = SubResource("RectangleShape2D_5up26")
+
+[node name="Vision" type="Area2D" parent="." unique_id=1076226609]
+
+[node name="Vision Collisions" type="CollisionShape2D" parent="Vision" unique_id=60116778]
+shape = SubResource("CircleShape2D_5up26")
